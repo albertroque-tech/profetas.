@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Pregar nos Profetas | Escola do Caminho</title>
+    
+    <!-- Fontes Premium do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variáveis de Cores - Identidade Escola do Caminho */
+        :root {
+            --bg-black: #080808;
+            --bg-dark: #121212;
+            --bg-card: #1a1a1a;
+            --gold: #E5A910;
+            --gold-light: #f7ce5e;
+            --gold-dark: #b38205;
+            --text-white: #f5f5f5;
+            --text-gray: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Botão Dourado Premium */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+            color: #000;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(229, 169, 16, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 25px rgba(229, 169, 16, 0.5);
+        }
+
+        /* Seção Hero (Topo) */
+        .hero {
+            background: radial-gradient(circle at center, var(--bg-dark) 0%, var(--bg-black) 100%);
+            padding: 100px 0 80px;
+            text-align: center;
+            border-bottom: 1px solid rgba(229, 169, 16, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Seção Problema / Dor */
+        .pain-section {
+            padding: 80px 0;
+            background-color: var(--bg-black);
+            text-align: center;
+        }
+
+        .pain-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .pain-text {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .pain-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Seção Módulos */
+        .modules-section {
+            padding: 80px 0;
+            background-color: var(--bg-dark);
+        }
+
+        .modules-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 50px;
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .module-card {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .module-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-white);
+        }
+
+        .module-card ul {
+            list-style-type: none;
+        }
+
+        .module-card ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-gray);
+        }
+
+        .module-card ul li::before {
+            content: '✓';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Seção de Oferta */
+        .offer-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-black), var(--bg-dark));
+        }
+
+        .offer-box {
+            background-color: var(--bg-card);
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            padding: 50px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 40px rgba(229, 169, 16, 0.15);
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .price-new {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .price-installments {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--text-white);
+        }
+
+        /* Garantia */
+        .guarantee {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #050505;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .module-grid { grid-template-columns: 1fr; }
+            .price-new { font-size: 3rem; }
+            .offer-box { padding: 30px 20px; border-width: 1px;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 600; margin-bottom: 15px;">Escola do Caminho Apresenta</p>
+            <h1>O Guia Definitivo Para Pregar nos Profetas</h1>
+            <p>Saia do zero, vença o medo da linguagem profética e construa um sermão completo, bíblico e profundamente transformador para a sua igreja.</p>
+            <a href="https://pay.kiwify.com.br/plje47Z" class="btn">Quero Aprender a Pregar!</a>
+        </div>
+    </section>
+
+    <!-- DOR / PROBLEMA -->
+    <section class="pain-section">
+        <div class="container">
+            <h2>Por que é tão difícil pregar nos profetas?</h2>
+            <div class="pain-text">
+                <p>A realidade é que a maioria dos pregadores foge dos livros proféticos. O motivo? Eles utilizam uma linguagem carregada de <strong>símbolos, visões e figuras escatológicas</strong> que muitas vezes nós não entendemos.</p>
+                <p>O resultado disso é que acabamos vendo "aberrações" teológicas nos púlpitos. Mensagens que inventam cenários que não estão na Bíblia e aplicações que simplesmente não tocam a vida comum das pessoas.</p>
+                <p>Mas não precisa ser assim. <strong>O profeta clássico era, antes de tudo, um pregador da aliança.</strong> E o objetivo desta formação prática é te dar as lentes certas para enxergar a mensagem central e levá-la para a sua igreja com clareza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÃO E MÓDULOS -->
+    <section class="modules-section">
+        <div class="container">
+            <h2>O Que Você Vai Aprender</h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Esta formação é um extrato direto e prático de uma mentoria fechada. Aulas curtas, direto ao ponto e com atividades de implementação após cada vídeo.</p>
+            
+            <div class="module-grid">
+                <!-- Módulo 1 -->
+                <div class="module-card">
+                    <h3 class="serif">Módulo 1: <br><span style="color: var(--gold); font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; text-transform: uppercase;">A Linguagem dos Profetas</span></h3>
+                    <ul>
+                        <li>A diferença entre Profecias e Biografias.</li>
+                        <li>Os Pregadores da Aliança: Entenda a missão dos profetas Clássicos e Pré-Clássicos.</li>
+                        <li>A Anatomia da Profecia: Como interpretar corretamente Símbolos, Visões e Predições sem inventar misticismos.</li>
+                        <li>Missões Práticas: Exercícios para extrair a mensagem original do texto.</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 2 -->
+                <div class="module-card">
+                    <h3 class="serif">Módulo 2: <br><span style="color: var(--gold); font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; text-transform: uppercase;">Construindo o Sermão</span></h3>
+                    <ul>
+                        <li>O Alicerce: Tema, Introdução, Desenvolvimento e Conclusão.</li>
+                        <li>As 3 perguntas que salvam qualquer esboço: O que o texto diz? O que mudar? Como mudar?</li>
+                        <li>Exegese Prática: Dissecando o "Vale de Ossos Secos" (Ezequiel 37) passo a passo.</li>
+                        <li>O Púlpito: Como transformar o estudo profético em aplicação real e consolo para a segunda-feira da igreja.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="oferta-section offer-section">
+        <div class="container">
+            <div class="offer-box">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">Acesso Imediato à Formação</h2>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">O método que uso na minha mentoria de alto valor, agora destilado em um formato de implementação rápida.</p>
+                
+                <div class="price-old">De R$ 97,00 por apenas:</div>
+                <div class="price-installments">6x de <span style="color: var(--gold); font-weight: bold;">R$ 5,06</span></div>
+                <div style="color: var(--text-gray); margin-bottom: 30px;">ou R$ 26,99 à vista</div>
+                
+                <a href="https://pay.kiwify.com.br/plje47Z" class="btn" style="display: block;">Comprar Agora e Começar</a>
+                
+                <div class="guarantee">
+                    <span>🔒 Compra 100% Segura | 7 Dias de Garantia Incondicional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Escola do Caminho. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px;">Este produto não garante a obtenção de resultados milagrosos. O sucesso da aplicação depende do estudo e dedicação do aluno.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
